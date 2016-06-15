@@ -5,6 +5,8 @@ class CodesController < ApplicationController
   # GET /codes.json
   def index
     @codes = Code.all
+    @dv = ::Daru::Vector.new @codes.map { |code| code.lines },
+      index: @codes.map { |code| code.name }
   end
 
   # GET /codes/1
