@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/lokeshh/nyaplot.git
-  revision: 06083fa83b2df7087ced638eb13c919f9071b111
-  branch: http_to_https
+  revision: 5f5a99e3fff998a7efb5006646c1c96a261131fa
+  branch: exp
   specs:
-    nyaplot (0.2.0.rc1)
+    nyaplot (0.1.6)
 
 GIT
   remote: https://github.com/lokeshh/daru

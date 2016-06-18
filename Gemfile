@@ -36,7 +36,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'daru', git: 'https://github.com/lokeshh/daru', branch: 'cat_index'
 
 # Nyaplot for plotting
-gem 'nyaplot', github: 'lokeshh/nyaplot', branch: 'http_to_https'
+gem 'nyaplot', github: 'lokeshh/nyaplot', branch: 'exp'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
