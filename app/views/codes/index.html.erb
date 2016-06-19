@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Codes</h1>
+<h1>Listing Lines of Codes</h1>
 
 <table>
   <thead>
@@ -27,13 +27,16 @@
 <br>
 <br>
 
-<B><%= link_to 'New Code', new_code_path %></B>
+<B><I><%= link_to 'New Lines of Code Entry', new_code_path %></I></B>
 
 <br>
 <br>
 
-<p><B>Resultant Vector</p></B>
-<%== @dv.to_s %>
+<p><B>Statistics</p></B>
+<p><B>Mean: </B> <%= @dv.mean %></p>
+<p><B>Median:</B><%= @dv.median %></p>
+<p><B>Min:</B>   <%= @dv.min %></p>
+<p><B>Max:</B>   <%= @dv.max %></p>
 
 <br>
 
