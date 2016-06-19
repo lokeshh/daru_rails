@@ -7,6 +7,10 @@ class CodesController < ApplicationController
     @codes = Code.all
     @dv = ::Daru::Vector.new @codes.map { |code| code.lines },
       index: @codes.map { |code| code.name }
+    @plot = Nyaplot::Plot.new
+    @plot.add(:bar, @dv.index.to_a, @dv.to_a)
+    @plot.x_label("Name")
+    @plot.y_label("Lines of code")
   end
 
   # GET /codes/1
@@ -61,17 +65,6 @@ class CodesController < ApplicationController
       format.html { redirect_to codes_url, notice: 'Code was successfully destroyed.' }
       format.json { head :no_content }
     end
-  end
-
-  def show_graph
-    @codes = Code.all
-    @dv = ::Daru::Vector.new @codes.map { |code| code.lines },
-      index: @codes.map { |code| code.name }    
-    plot = Nyaplot::Plot.new
-    plot.add(:bar, @dv.index.to_a, @dv.to_a)
-    plot.x_label("Name")
-    plot.y_label("Lines of code")
-    plot.export_html("./app/views/codes/show_graph.html.erb")
   end
 
   private

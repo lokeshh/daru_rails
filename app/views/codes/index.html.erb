@@ -24,16 +24,24 @@
   </tbody>
 </table>
 <br>
+<br>
+<br>
 
-<p>Resultant Vector</p>
+<B><%= link_to 'New Code', new_code_path %></B>
+
+<br>
+<br>
+
+<p><B>Resultant Vector</p></B>
 <%== @dv.to_s %>
 
 <br>
 
-<%= link_to 'Resultant Graph', show_graph_path %>
+<p><B>Resultant Graph</B></p>
+
+<%== @plot.to_iruby.second %>
 
 <br>
 <br>
 <br>
 
-<%= link_to 'New Code', new_code_path %>
